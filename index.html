@@ -1,70 +1,169 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="gallery.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication Successful • Flixy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.12);
+            filter: blur(70px);
+        }
+
+        .circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -80px;
+            left: -80px;
+        }
+
+        .circle:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            bottom: -120px;
+            right: -120px;
+            background: rgba(16, 185, 129, 0.15);
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            width: min(90%, 440px);
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 24px;
+            padding: 42px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,.35);
+            animation: fadeIn .5s ease;
+        }
+
+        .success-icon {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 40px rgba(16,185,129,.35);
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #6366f1;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: .25s ease;
+        }
+
+        .btn:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+        }
+
+        .small {
+            margin-top: 20px;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                padding: 32px 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
 <body>
-  <header>
-    <h1 class="header-h1">HI;</h1>
-    <h2 class="header-h2">Iam Jack</h2>
-    <h3 class="header-h3">Profesional Photographer</h3>
-    <div class="social">
-      <a class="header-a" href="#">Instagram</a><br> <br>
-     <a class="header-a" href="#">Twitter</a><br><br>
-     <a class="header-a" href="#">Behance</a> <br>
-   </div>
-  </header>
-  <h1 class="h1-1">WORK</h1>
-  <div class="grid image-grid">
-    <div class="grid-block">
-      <div class="tile">
-        <a class="tile-link" href="#">
-          <img class="tile-img tile-img1" src="images/photo1.png" alt="Image">
-        </a>
-      </div>
+
+<div class="background">
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
+<div class="card">
+    <div class="success-icon">✓</div>
+
+    <h1>Authentication Successful</h1>
+
+    <p>
+        Your Flixy account has been successfully verified.
+        You can now return to the app and continue your experience.
+    </p>
+
+    <a href="flixy://" class="btn">
+        Open Flixy
+    </a>
+
+    <div class="small">
+        You may safely close this window.
     </div>
-    <div class="grid-block">
-      <div class="tile">
-        <a class="tile-link" href="#">
-          <img class="tile-img tile-img2" src="images/photo2.png" alt="Image">
-        </a>
-      </div>
-    </div>
-    <div class="grid-block">
-      <div class="tile">
-        <a class="tile-link" href="#">
-          <img class="tile-img tile-img3" src="images/photo3.png" alt="Image">
-        </a>
-      </div>
-    </div>
-    <div class="grid-block">
-      <div class="tile">
-        <a class="tile-link" href="#">
-          <img class="tile-img tile-img4" src="images/photo4.png" alt="Image">
-        </a>
-      </div>
-    </div>
-    <div class="grid-block">
-      <div class="tile">
-        <a class="tile-link" href="#">
-          <img class="tile-img tile-img5" src="images/photo5.png" alt="Image">
-        </a>
-      </div>
-    </div>
-    <div class="grid-block">
-      <div class="tile">
-        <a class="tile-link" href="#">
-          <img class="tile-img tile-img6" src="images/photo6.png" alt="Image">
-        </a>
-      </div>
-    </div>
-  </div>
-<footer>
-  <h3>©2021 Jack The Photographer</h3>
-</footer>
+</div>
 
 </body>
 </html>
